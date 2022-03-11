@@ -1,0 +1,53 @@
+﻿@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Garage</title>
+    <style>
+
+        body {
+            font-family: Verdana;
+            margin-left: 50px;
+            margin-top: 50px;
+        }
+
+        div {
+            border: 1px solid black;
+            width: 40%;
+            margin: 1.2em;
+            padding: 1em;
+        }
+    </style>
+
+
+</head>
+<body>
+    <label>Car Garage</label>
+    <p>
+        <input type="submit" value="View Cars"
+               class="submit">
+    </p>
+
+    <div>
+        @for (int i = 1; i <= 3; i++)
+        {
+            String url = "https://cargarage.blob.core.windows.net/cars/" + i + ".jpg";
+
+
+            <img width="75px" height="100px" alt="cardImage"
+                 src='@url'>
+        } 
+        
+        
+
+    </div>
+
+</body>
+</html>
